@@ -6,6 +6,15 @@ print("Hello " + name + " , thank you so much for coming in today.")
 
 coffee = input("Would you like a small or large coffee?\n")
 
-print("Sure, your " + coffee + " coffee will be ready in 5 mins.")
+price = 8
 
-price = 5 dollarydoos 
+amount = input("How many?\n")
+
+
+total = price * int(amount)
+print(total)
+
+#print("That will be " + total + " thanks.")
+
+#print("Sure, your " + coffee + " coffee will be ready in 5 mins.")
+
