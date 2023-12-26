@@ -63,4 +63,5 @@ motorcycles.remove(too_gay)
 print(motorcycles)
 print(f"\nA {too_gay.title()} is too gay for me.")
 
-# Challenge - 
+# Challenge - Guest list
+guests = [""]
