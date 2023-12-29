@@ -11,7 +11,7 @@ print(bicycles[3])
 # -1 will print last item in list
 print(bicycles[-1])
 
-# Use individual valur from list with f-string
+# Use individual value from list with f-string
 message = f"My first bike was a {bicycles[0].title()}"
 print(message)
 
