@@ -21,7 +21,7 @@ print(squares)
 numbers = list(range(1, 21))
 print(numbers)
 
-# Challenge - one in a million
+# Challenge - one to a million
 #for value in range(1, 1000000):
 #    print(value)
 
@@ -41,3 +41,14 @@ print(result)
 # Challenge - Threes
 for number in range(3, 31, 3):
     print(number)
+
+# Challenge - cubes
+cubes = []
+for value in range (1, 11):
+    cubes.append(value**3)
+
+print(cubes)
+
+# Challenge - cube comprehension
+cubes = [value**3 for value in range(1, 11)]
+print(cubes)

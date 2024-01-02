@@ -30,3 +30,4 @@ animals = ["cat", "dog", "wolf"]
 for animal in animals:
     print(f"A {animal} would make a great pet.")
 print("\nThey would all make great pets.")
+
