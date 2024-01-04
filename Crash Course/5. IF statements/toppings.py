@@ -100,3 +100,46 @@ if "vien" in users:
     print("Hello Vien!")
 else:
     print("We need more users!") 
+
+# Challenge - checking usernames
+current_users = ["admin", "user", "vien", "bloke", "fiona"]
+
+new_users = ["VIEN", "fiona", "new", "newuser", "adminstrator"]
+
+for new in new_users:
+    if new in current_users:
+        print("Sorry this username is taken. Please try again")
+
+    else:
+        print("Username is available")
+
+# Challenge - ordinal numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+for number in numbers:
+    if number == 1:
+        print(f"{number}st")
+
+    elif number == 2:
+        print(f"{number}nd")
+
+    elif number == 3:
+        print(f"{number}rd")
+
+    elif number == 4:
+        print(f"{number}th")
+
+    elif number == 5:
+        print(f"{number}th")
+
+    elif number == 6:
+        print(f"{number}th")
+
+    elif number == 7:
+        print(f"{number}th")
+
+    elif number == 8:
+        print(f"{number}th")
+
+    else:
+        print(f"{number}th")
