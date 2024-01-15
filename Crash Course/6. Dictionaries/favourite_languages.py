@@ -16,3 +16,19 @@ print(vien["age"])
 print(vien["city"])
 
 # Favourite numbers
+favourite_numbers = {
+    "vien": "69",
+    "fiona": "8",
+    "kora": "1"
+    }
+
+numbers = favourite_numbers["fiona"].title()
+print(f"Fiona's favourite number in {numbers}.")
+
+numbers = favourite_numbers["vien"].title()
+print(f"Vien's favourite number in {numbers}.")
+
+numbers = favourite_numbers["kora"].title()
+print(f"Kora's favourite number in {numbers}.")
+
+# Glossary
