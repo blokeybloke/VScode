@@ -32,3 +32,10 @@ numbers = favourite_numbers["kora"].title()
 print(f"Kora's favourite number in {numbers}.")
 
 # Glossary
+python = {"dictionary": "keys and value",
+          "function": "get python to do",
+          "list": "store sets of information"
+          }
+word = python["dictionary"]
+print(f"In python, dictionaries hold {word}.")
+
