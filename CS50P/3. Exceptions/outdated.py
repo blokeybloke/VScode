@@ -1,39 +1,55 @@
-# List of month names
-months = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"]
+months = {
+    "January": "1",
+    "February": "2",
+    "March": "3",
+    "April": "4",
+    "May": "5",
+    "June": "6",
+    "July": "7",
+    "August": "8",
+    "September": "9",
+    "October": "10",
+    "November": "11",
+    "December": "12"
+}
 
-while True:
-    user_input = input("Enter a date (e.g., 9/8/1636 or September 8, 1636): ")
+def main():
 
-    # Split input based on space and slash
-    if "/" in user_input:
-        parts = user_input.split("/")
-        if len(parts) == 3:
-            month, day, year = parts
-            # Check if they are all digits
-            if month.isdigit() and day.isdigit() and year.isdigit():
-                # Check if month and day are in valid ranges
-                if 1 <= int(month) <= 12 and 1 <= int(day) <= 31:
-                    print(f"{year}-{int(month):02d}-{int(day):02d}")
+    while True:
+        try:
+            date = input("Date: ").strip()
+            if date[0].isdigit():
+                x, y, z = date.split("/")
+                x = int(x)
+                y = int(y)
+                z = int(z)
+                if x <= 12 and y <= 31:
+                    print(f"{z}-{x:02}-{y:02}")
                     break
+
+            else:
+                if "," not in date:
+                    print("Invalid date format. Please try again.")
+                    continue
+
+                x, y, z = date.split(" ")
+                if x in months:
+                    x = months[x]
+                    y = y.replace(",", "")
+                    x = int(x)
+                    y = int(y)
+                    if x <= 12 and y <= 31:
+                        print(f"{z}-{x:02}-{y:02}")
+                        break
+                    else:
+                        print("Invalid date. Please try again.")
+                        continue
                 else:
-                    print("Month or day out of range.")
-            else:
-                print("Please enter numbers for month, day, and year.")
-        else:
-            print("Invalid format. Make sure to use MM/DD/YYYY.")
-    elif any(month in user_input for month in months):
-        parts = user_input.replace(",", "").split()
-        if len(parts) == 3 and parts[1].isdigit() and parts[2].isdigit():
-            month_name, day, year = parts
-            # Check if day is in a valid range
-            if 1 <= int(day) <= 31:
-                month_number = months.index(month_name) + 1
-                print(f"{year}-{month_number:02d}-{int(day):02d}")
-                break
-            else:
-                print("Day out of range.")
-        else:
-            print("Invalid format. Make sure to use 'Month DD, YYYY'.")
-    else:
-        print("Invalid format or month name.")
+                    print("Invalid month name. Please try again.")
+                    continue
+
+        except ValueError:
+            print("Invalid date format. Please try again.")
+
+main()
+
