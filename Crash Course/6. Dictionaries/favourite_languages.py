@@ -133,3 +133,16 @@ for person in people:
 
     if person not in favourite_languages:
         print(f"{person.title()}, please take the poll now!")
+
+# Nest
+favourite_languages = {
+    "jen": ["python", "rust"],
+    "sarah": ["c", "go"],
+    "edward": ["rust", "c++"],
+    "phil": ["python", "haskell"],
+    }
+
+for name, languages in favourite_languages.items():
+    print(f"\n{name.title()}'s favourite languages are:")
+    for language in languages:
+        print(f"\t{language.title()}")
