@@ -1,4 +1,7 @@
 user = input("first number: ")
-user = input("second number: ")
+user_1 = input("second number: ")
 
-print()
+x = int(user)
+y = int(user_1)
+
+print(x + y)
